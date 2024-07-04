@@ -1,0 +1,13 @@
+<launch>
+	<include file="$(find openbot_gazebo)/launch/gazebo.launch"/>
+	<include file="$(find openbot_control)/launch/controller.launch"/> 
+	<!--Launch the inverse kinematic -->
+
+	<!--RVIZ-->
+	<!-- <arg default="$(find openbot_inverse_kinematic)/cfg/config.rviz" name="rvizconfig"/>
+  	<node args="-d $(arg rvizconfig)" name="rviz" pkg="rviz" required="true" type="rviz"/> -->
+	
+	<!--TF frame to know the Position of the effector-->
+	<node pkg="tf2_ros" type="static_transform_publisher" name="effector_link_tf" args="0 0 0.15 0 0 0 1 clamp_arm_link_1 effector_link_tf" />
+
+</launch>

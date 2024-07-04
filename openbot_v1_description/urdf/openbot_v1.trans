@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<robot name="openbot_v1" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="clamp1_clamp2_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="clamp1_clamp2_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="clamp1_clamp2_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm2_arm3_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm2_arm3_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm2_arm3_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm1_arm2_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm1_arm2_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm1_arm2_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="base_arm1_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="base_arm1_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="base_arm1_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm4_clamp1_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm4_clamp1_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm4_clamp1_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm3_arm4_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm3_arm4_joint">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm3_arm4_joint_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

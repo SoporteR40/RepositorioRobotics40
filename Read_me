@@ -1,0 +1,31 @@
+Bienvenido!!
+Este es workspace incluye las demostraciones de Robotics 4.0 respecto a la implementaciòn de Modelos Cinematicos en ROS.
+
+A continuaciòn, se encuentran los comandos para ejecutar las demos desde el terminal de Ubuntu.
+
+
+#······Demostracion 2g
+roslaunch modelos_cinematicos cinematica_inversa_2g.launch
+
+#······Demostracion 3g
+roslaunch modelos_cinematicos cinematica_inversa_3g.launch
+
+#······Demostracion 4g
+
+roslaunch modelos_cinematicos cinematica_inversa_4g.launch
+
+#······Demostracion Espacio de trabajo 2g
+
+roslaunch modelos_cinematicos Demo_Espacio_de_trabajo_2G.launch
+
+#······Demostracion Espacio de trabajo 3g
+roslaunch modelos_cinematicos Demo_Espacio_de_trabajo_3G.launch
+
+#······Demostracion Espacio de trabajo 3g_qy
+roslaunch modelos_cinematicos Demo_Espacio_de_trabajo_3G_qy.launch
+
+#······Demostracion Trayectoria 2G
+roslaunch modelos_cinematicos Demo_trayectorias_2g.launch 
+
+#······Demostracion Trayectoria 3G
+roslaunch modelos_cinematicos Demo_trayectorias_3g.launch 

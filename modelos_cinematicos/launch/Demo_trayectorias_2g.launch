@@ -1,0 +1,27 @@
+<launch>
+	<include file="$(find openbot_gazebo)/launch/gazebo.launch"/>
+	<include file="$(find openbot_control)/launch/controller.launch"/> 
+	<!--Launch el nodo de trazo de figuras para 2gdl -->
+	<node pkg="modelos_cinematicos"
+	 type="Demo_figuras_2gdl.py"
+	 name="node_trayectoria_2gdl"
+	 output="screen"
+	  >
+	 </node>
+	<!--Launch nodo de configuraciones para workspace 3GDL-->
+	<node pkg="modelos_cinematicos"
+	 type="configuraciones_2gdl_figuras.py"
+	 name="configuraciones_2gdl_figuras"
+	 output="screen"
+	 >
+	</node>
+	<!--RQT_reconfigure for the dynamic configure-->
+	<node name="rqt_reconfigure" pkg="rqt_reconfigure" type="rqt_reconfigure"/> 
+	
+	<arg default="$(find modelos_cinematicos)/cfg/config.rviz" name="rvizconfig"/>
+  	<node args="-d $(arg rvizconfig)" name="rviz" pkg="rviz" required="true" type="rviz"/> 
+  	
+	<!--TF frame to know the Position of the effector-->
+	<node pkg="tf2_ros" type="static_transform_publisher" name="effector_link_tf" args="0 0 0.15 0 0 0 1 clamp_arm_link_1 effector_link_tf" />
+
+</launch>
